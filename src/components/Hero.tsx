@@ -28,22 +28,13 @@ export default function Hero() {
           <Heading
             lineHeight={1.1}
             fontWeight={600}
-            color={useColorModeValue('purple.900', 'white')}
+            color={useColorModeValue('black', 'white')}
             >
             <Text
             fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
               as={'span'}
               position={'relative'}
-              _after={{
-                content: "''",
-                width: 'full',
-                height: '30%',
-                position: 'absolute',
-                bottom: 1,
-                left: 0,
-                bg: 'red.400',
-                zIndex: -1,
-              }}>
+              >
              Zadn Space Solutions
             </Text>
             <br />
@@ -52,9 +43,7 @@ export default function Hero() {
             </Text>
           </Heading>
           <Text color={'gray.500'}>
-            Snippy is a rich coding snippets app that lets you create your own code
-            snippets, categorize them, and even sync them in the cloud so you can use them
-            anywhere. All that is free!
+          Navigating the infinite possibilities of the space industry. Our mission is to guide startups, entrepreneurs, and businesses on their journey to the stars. We provide valuable guidance and resources to help aspiring entrepreneurs thrive in the space industry within the UAE.
           </Text>
           <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
             <Button
@@ -62,9 +51,9 @@ export default function Hero() {
               size={'lg'}
               fontWeight={'normal'}
               px={6}
-              colorScheme={'red'}
-              bg={'red.400'}
-              _hover={{ bg: 'red.500' }}>
+              colorScheme={'yellow'}
+              bg={'yellow.400'}
+              _hover={{ bg: 'yellow.500' }}>
               Get started
             </Button>
             <Button
@@ -90,7 +79,7 @@ export default function Hero() {
             top={'-20%'}
             left={0}
             zIndex={-1}
-            color={useColorModeValue('red.50', 'red.400')}
+            color={useColorModeValue('yellow.50', 'yellow.400')}
           />
           <Box
             position={'relative'}

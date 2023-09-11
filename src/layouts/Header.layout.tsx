@@ -16,10 +16,11 @@ import {
   useBreakpointValue,
   useDisclosure,
 } from '@chakra-ui/react'
-
+import logo from '../../public/logoMA.png'
 import { FaRegWindowClose, FaLayerGroup, FaAngleRight, FaAngleDown, FaRegMoon, FaSun } from "react-icons/fa"
 
 import { NAV_ITEMS, NavItem } from '@/data/header'
+import Image from 'next/image'
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure()
   const { colorMode, toggleColorMode } = useColorMode()
@@ -48,12 +49,7 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}>
-            Logo
-          </Text>
+          <Image src={logo} width={45} height={45} alt='Zadn logo'/>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
@@ -77,10 +73,10 @@ export default function WithSubnavigation() {
             fontSize={'sm'}
             fontWeight={600}
             color={'white'}
-            bg={'pink.400'}
+            bg={'yellow.400'}
             href={'#'}
             _hover={{
-              bg: 'pink.300',
+              bg: 'yellow.300',
             }}>
             Sign Up
           </Button>
@@ -108,6 +104,7 @@ const DesktopNav = () => {
               <Box
                 as="a"
                 p={2}
+                alignItems="center"
                 href={navItem.href ?? '#'}
                 fontSize={'sm'}
                 fontWeight={500}
@@ -153,13 +150,13 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       display={'block'}
       p={2}
       rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+      _hover={{ bg: useColorModeValue('yellow.50', 'gray.900') }}>
       <Stack direction={'row'} align={'center'}>
         <Box>
 
           <Text
             transition={'all .3s ease'}
-            _groupHover={{ color: 'pink.400' }}
+            _groupHover={{ color: 'yellow.400' }}
             fontWeight={500}>
             {label}
           </Text>
@@ -174,7 +171,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           align={'center'}
           flex={1}>
 
-          <Icon color={'pink.400'} w={5} h={5} as={FaAngleRight} />
+          <Icon color={'yellow.400'} w={5} h={5} as={FaAngleRight} />
         </Flex>
       </Stack>
     </Box>
