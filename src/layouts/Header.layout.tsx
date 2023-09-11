@@ -16,7 +16,6 @@ import {
   useBreakpointValue,
   useDisclosure,
 } from '@chakra-ui/react'
-import logo from '../../public/logoMA.png'
 import { FaRegWindowClose, FaLayerGroup, FaAngleRight, FaAngleDown, FaRegMoon, FaSun } from "react-icons/fa"
 
 import { NAV_ITEMS, NavItem } from '@/data/header'
@@ -49,7 +48,6 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Image src={logo} width={45} height={45} alt='Zadn logo'/>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
@@ -92,7 +90,7 @@ export default function WithSubnavigation() {
 
 const DesktopNav = () => {
   const linkColor = useColorModeValue('gray.600', 'gray.200')
-  const linkHoverColor = useColorModeValue('gray.800', 'white')
+  const linkHoverColor = 'yellow.400'
   const popoverContentBgColor = useColorModeValue('white', 'gray.800')
 
   return (
