@@ -16,8 +16,8 @@ import {
   useBreakpointValue,
   useDisclosure,
 } from '@chakra-ui/react'
-import { FaRegWindowClose, FaLayerGroup, FaAngleRight, FaAngleDown, FaRegMoon, FaSun } from "react-icons/fa"
-
+import { FaRegWindowClose, FaLayerGroup, FaAngleRight, FaAngleDown, FaRegMoon } from "react-icons/fa"
+import {BsFillSunFill} from "react-icons/bs";
 import { NAV_ITEMS, NavItem } from '@/data/header'
 import Image from 'next/image'
 export default function WithSubnavigation() {
@@ -60,7 +60,7 @@ export default function WithSubnavigation() {
           direction={'row'}
           spacing={6}>
           <Button onClick={toggleColorMode}>
-            {colorMode === 'light' ? <FaRegMoon /> : <FaSun />}
+            {colorMode === 'light' ? <FaRegMoon /> : <BsFillSunFill />}
           </Button>
           <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
             Sign In
