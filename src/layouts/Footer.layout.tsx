@@ -69,7 +69,7 @@ export default function FooterLayout() {
           spacing={8}>
           <Stack spacing={6}>
             <Box>
-              <Logo />
+              <Logo type="long" />
             </Box>
             <Text fontSize={'sm'}>© 2022 Chakra Templates. All rights reserved</Text>
             <Stack direction={'row'} spacing={6}>
