@@ -1,4 +1,7 @@
+"use client"
+import FooterLayout from '@/layouts/Footer.layout'
 import WithSubnavigation from '@/layouts/Header.layout'
+import { CacheProvider } from '@chakra-ui/next-js'
 import { ChakraProvider } from '@chakra-ui/react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -17,11 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ChakraProvider>
-      <WithSubnavigation/>
-      <div>holasas</div>
-        <body className={inter.className}>{children}</body>
-      </ChakraProvider>
+      <CacheProvider>
+        <ChakraProvider>
+          <body >{children}</body>
+        </ChakraProvider>
+      </CacheProvider>
     </html>
   )
 }
