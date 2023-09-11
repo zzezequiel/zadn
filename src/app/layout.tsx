@@ -1,8 +1,9 @@
 "use client"
 import FooterLayout from '@/layouts/Footer.layout'
 import WithSubnavigation from '@/layouts/Header.layout'
+import theme from '@/theme/theme'
 import { CacheProvider } from '@chakra-ui/next-js'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, ColorModeScript  } from '@chakra-ui/react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
@@ -21,7 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <CacheProvider>
-        <ChakraProvider>
+        <ChakraProvider theme={theme}>
+          <ColorModeScript initialColorMode={theme.config.initialColorMode}/>
           <body >{children}</body>
         </ChakraProvider>
       </CacheProvider>

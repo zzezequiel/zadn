@@ -28,8 +28,10 @@ export default function Hero() {
           <Heading
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
+            color={useColorModeValue('purple.900', 'white')}
+            >
             <Text
+            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
               as={'span'}
               position={'relative'}
               _after={{
@@ -42,11 +44,11 @@ export default function Hero() {
                 bg: 'red.400',
                 zIndex: -1,
               }}>
-              Write once,
+             Zadn Space Solutions
             </Text>
             <br />
-            <Text as={'span'} color={'red.400'}>
-              use everywhere!
+            <Text fontSize={35} as={'span'} >
+            Navigating Space Ventures!
             </Text>
           </Heading>
           <Text color={'gray.500'}>
